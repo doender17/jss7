@@ -17,3 +17,23 @@ All Restcomm [docs](https://www.restcomm.com/docs/) and [downloads](https://www.
 Open Source Java SS7 stack that allows Java apps to communicate with legacy SS7 communications equipment. 
 
 jSS7 provides an open source software solution implementing M3UA, SCCP, TCAP, CAMEL, MAP, ISUP protocols for a dedicated equipment (Dialogic) and also M3UA (SIGTRAN) over IP.
+
+## How to create a working version
+
+Install pre-requisites. Note openjdk-11-jdk won't work
+
+sudo apt-get install openjdk-8-jdk
+sudo apt install maven
+
+Then you need to install SCTP and jss7 to your local maven repo, like this:
+
+git clone https://github.com/doender17/sctp.git
+cd sctp
+mvn install -DskipTests
+
+cd ..
+git clone https://github.com/doender17/jss7.git
+cd jss7
+	
+mvn install -DskipTests
+
